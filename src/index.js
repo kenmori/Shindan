@@ -4,20 +4,20 @@ import Button from "@material-ui/core/Button";
 import { useEffect } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
-interface HelloProps {
-  name: string;
-  age: number;
-}
-interface Question {
-  q1: string;
-  q2: string;
-  q3: string;
-  q4: string;
-  q5: string;
-  q6: string;
-  q7: string;
-  q8: string;
-}
+// interface HelloProps {
+//   name: string;
+//   age: number;
+// }
+// interface Question {
+//   q1: string;
+//   q2: string;
+//   q3: string;
+//   q4: string;
+//   q5: string;
+//   q6: string;
+//   q7: string;
+//   q8: string;
+// }
 
 const quesion = [
   { お酒は好きでよく飲む: true },
@@ -240,7 +240,7 @@ const Start = ({
 const HistoryItem = props => {
   console.log(props.match.params.id, "HIstory");
   let historyValue;
-  //TODO 共通化
+  // TODO 共通化
   if (localStorage.getItem("shindan")) {
     historyValue = JSON.parse(localStorage.getItem("shindan"));
   }
@@ -320,8 +320,8 @@ const Question = () => {
   </div>;
 };
 
-const InputFeedback = ({ error }) =>
-  error ? <div className={classNames("input-feedback")}>{error}</div> : null;
+// const InputFeedback = ({ error }) =>
+// error ? <div className={classNames("input-feedback")}>{error}</div> : null;
 
 // Radio group
 const RadioButtonGroup = ({
