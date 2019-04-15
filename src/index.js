@@ -4,6 +4,7 @@ import Button from "@material-ui/core/Button";
 import { useEffect } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
+import Example from "./Example";
 import { classNames } from "classnames"
 // interface HelloProps {
 //   name: string;
@@ -576,6 +577,9 @@ const App = () => {
               <li>
                 <Link to="/history/">履歴(工事中)</Link>
               </li>
+              <li>
+                <Link to="/example/">example</Link>
+              </li>
             </ul>
           </nav>
           <Route
@@ -594,6 +598,7 @@ const App = () => {
           />
 
           <Route path="/history/" exact render={() => <History />} />
+          <Route path="/example/" exact render={() => <Example />} />
           <Route
             path="/history/:id/"
             exact
