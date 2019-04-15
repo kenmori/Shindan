@@ -4,6 +4,7 @@ import Button from "@material-ui/core/Button";
 import { useEffect } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
+import { classNames } from "classnames"
 // interface HelloProps {
 //   name: string;
 //   age: number;
@@ -143,11 +144,11 @@ const lank = [
 //今度は私の質問を設定して意中の人に送る
 //LINEで送る
 
-const Hello: React.FC<HelloProps> = ({ name, age }) => (
-  <h1>
-    Hello {name} {age}!
-  </h1>
-);
+// const Hello: React.FC<HelloProps> = ({ name, age }) => (
+//   <h1>
+//     Hello {name} {age}!
+//   </h1>
+// );
 
 // const evalMatch = state => {
 //   console.log(state);
@@ -190,40 +191,40 @@ const Start = ({
           </div>
         </React.Fragment>
       ) : (
-        <div>
           <div>
-            <h3>
-              質問{questionNum + 1} / {questionLength}
-            </h3>
+            <div>
+              <h3>
+                質問{questionNum + 1} / {questionLength}
+              </h3>
 
-            <div>{questionKey[questionNum]}</div>
-            <div style={{ marignTop: 10 }} />
-            <Button
-              variant="outlined"
-              onClick={() => {
-                setCount(Object.assign({}, state, { [questionNum]: true }));
-                sendState(Object.assign({}, state, { [questionNum]: true }));
-                setQuesionNumber(questionNum + 1);
-              }}
-              color="primary"
-              style={{ marginRight: 10 }}
-            >
-              はい
+              <div>{questionKey[questionNum]}</div>
+              <div style={{ marignTop: 10 }} />
+              <Button
+                variant="outlined"
+                onClick={() => {
+                  setCount(Object.assign({}, state, { [questionNum]: true }));
+                  sendState(Object.assign({}, state, { [questionNum]: true }));
+                  setQuesionNumber(questionNum + 1);
+                }}
+                color="primary"
+                style={{ marginRight: 10 }}
+              >
+                はい
             </Button>
-            <Button
-              variant="outlined"
-              color="secondary"
-              onClick={() => {
-                setCount(Object.assign({}, state, { [questionNum]: false }));
-                sendState(Object.assign({}, state, { [questionNum]: false }));
-                setQuesionNumber(questionNum + 1);
-              }}
-            >
-              いいえ
+              <Button
+                variant="outlined"
+                color="secondary"
+                onClick={() => {
+                  setCount(Object.assign({}, state, { [questionNum]: false }));
+                  sendState(Object.assign({}, state, { [questionNum]: false }));
+                  setQuesionNumber(questionNum + 1);
+                }}
+              >
+                いいえ
             </Button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
     </div>
   );
 };
@@ -289,8 +290,8 @@ const History = () => {
             );
           })
         ) : (
-          <p>履歴はありません</p>
-        )}
+            <p>履歴はありません</p>
+          )}
       </ul>
     </div>
   );
@@ -320,8 +321,8 @@ const Question = () => {
   </div>;
 };
 
-// const InputFeedback = ({ error }) =>
-// error ? <div className={classNames("input-feedback")}>{error}</div> : null;
+const InputFeedback = ({ error }) =>
+  error ? <div className={classNames("input-feedback")}>{error}</div> : null;
 
 // Radio group
 const RadioButtonGroup = ({
@@ -395,11 +396,11 @@ const Basic = () => (
                       </div>
                     ))
                   ) : (
-                    <button type="button" onClick={() => arrayHelpers.push("")}>
-                      {/* show this when user has removed all friends from the list */}
-                      Add a friend
+                      <button type="button" onClick={() => arrayHelpers.push("")}>
+                        {/* show this when user has removed all friends from the list */}
+                        Add a friend
                     </button>
-                  )}
+                    )}
                   <div>
                     <button type="submit">Submit</button>
                   </div>
@@ -429,7 +430,7 @@ const Table = ({ resultText, score, questionKey, resultState, initObject }) => {
       <div style={{ color: "red", fontSize: "70px", fontWeight: "bold" }}>
         {score}%
       </div>
-      <img src={`/src/image/${resultText.image}.png`} />
+      <img src={`/src/image/${resultText.image}.png`} alt="結果イメージ" />
       <div>{resultText.header}</div>
       <div>{resultText.text}</div>
       <br />
@@ -542,7 +543,7 @@ const Result = props => {
   );
 };
 
-const App: React.FC = () => {
+const App = () => {
   let obj = {};
   quesion.forEach((e, i) => {
     obj[i] = Object.values(e)[0];
