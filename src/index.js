@@ -308,8 +308,8 @@ const Setting = props => {
   );
 };
 
-const Question = () => {
-  <div>
+const Questions = () => {
+  return (<div>
     <br />
     相手に聞きたい質問と自分の答えを設定して、相性を測りましょう。
     <br />
@@ -318,7 +318,7 @@ const Question = () => {
     <br />
     <br />
     答え終わった後はキャプチャに撮ってお互いの「取扱説明書」になるといいですね。
-  </div>;
+  </div>)
 };
 
 const InputFeedback = ({ error }) =>
