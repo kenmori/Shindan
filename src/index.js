@@ -5,7 +5,21 @@ import { useEffect } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
 import Example from "./Example";
-import { classNames } from "classnames"
+import { classNames } from "classnames";
+import firebase from 'firebase'
+import "firebase/storage";
+
+var firebaseConfig = {
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID
+};
+firebase.initializeApp(firebaseConfig);
+
 // interface HelloProps {
 //   name: string;
 //   age: number;
@@ -156,11 +170,44 @@ const lank = [
 // };
 
 function Index() {
+  const [state, setState] = React.useState({data: []})
+  const getFireData = () => {
+    let db = firebase.database()
+    let ref = db.ref('sample/')
+    ref.orderByKey().limitToFirst(10).on('value', (snapshot) =>{
+      setState({
+        data: snapshot.val()
+      })
+    })
+  }
+  const getTableData = () =>{
+    let result = [];
+    if(state.data == null || state.data.length == 0){
+      return [<tr key="0"><th>NO DATA</th></tr>];
+    }
+    for(let i in state.data){
+      result.push(
+        <tr key={i}>
+          <th>{state.data[i].ID}</th>
+          <th>{state.data[i].name}</th>
+          <th>{state.data[i].message}</th>
+        </tr>
+      )
+    }
+    return result
+  }
+  if(state.data.length === 0){
+    getFireData()
+  }
   return (
     <div>
       <h2>もりたさんとの相性診断</h2>
       <img src="/src/image/main.png" alt="" />
       <div>森田が設定した質問に答えて自分との相性がわかります</div>
+      <table><tbody>
+        {getTableData()}
+      </tbody>
+      </table>
     </div>
   );
 }
@@ -177,7 +224,7 @@ const Start = ({
 }) => {
   return (
     <div>
-      <h2>診断</h2>
+      <h2>診断 </h2>
       {questionNum === questionLength ? (
         <React.Fragment>
           <div>終了しました</div>
@@ -186,7 +233,7 @@ const Start = ({
           <div>
             <Link to="/result/" resultState={{ result: state }}>
               <Button variant="contained" color="primary">
-                診断結果をみる
+                診断結果をみるfafa
               </Button>
             </Link>
           </div>
