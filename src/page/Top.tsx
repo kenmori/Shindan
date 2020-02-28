@@ -8,7 +8,7 @@ export function Component(props: Props) {
   return (
     <>
       <Helmet.Helmet title="Topページ | TerraceTech" />
-      <div>fafa</div>
+      <div></div>
     </>
   );
 }
