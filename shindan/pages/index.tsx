@@ -9,31 +9,21 @@ const Home = () => (
     <Nav />
 
     <div className="hero">
-      <h1 className="title">Welcome to Next!</h1>
+      <h1 className="title">診断アプリ</h1>
       <p className="description">
-        To get started, edit <code>pages/index.js</code> and save to reload.
+        相互で質問しあってリアルタイムで回答をえるアプリです
       </p>
 
       <div className="row">
         <Link href="https://github.com/zeit/next.js#getting-started">
           <a className="card">
-            <h3>Getting Started &rarr;</h3>
-            <p>Learn more about Next on Github and in their examples</p>
+            <h3>診断アプリ</h3>
+            <p>さあはじめよう</p>
           </a>
         </Link>
         <Link href="https://open.segment.com/create-next-app">
           <a className="card">
-            <h3>Examples &rarr;</h3>
-            <p>
-              Find other example boilerplates on the{' '}
-              <code>create-next-app</code> site
-            </p>
-          </a>
-        </Link>
-        <Link href="https://github.com/segmentio/create-next-app">
-          <a className="card">
-            <h3>Create Next App &rarr;</h3>
-            <p>Was this tool helpful? Let us know how we can improve it</p>
+            はじめる
           </a>
         </Link>
       </div>
