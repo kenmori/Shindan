@@ -15,15 +15,12 @@ const Home = () => (
       </p>
 
       <div className="row">
-        <Link href="https://github.com/zeit/next.js#getting-started">
-          <a className="card">
             <h3>診断アプリ</h3>
-            <p>さあはじめよう</p>
-          </a>
-        </Link>
-        <Link href="https://open.segment.com/create-next-app">
+            <p>参加する人数を決めてください</p>
+
+        <Link href="/create">
           <a className="card">
-            はじめる
+              質問を作成する
           </a>
         </Link>
       </div>
