@@ -1,5 +1,7 @@
-export const Create = () => {
+const Create = () => {
   return (
     <div>Create</div>
   )
 }
+
+export default Create
