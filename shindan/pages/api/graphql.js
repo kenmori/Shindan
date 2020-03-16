@@ -9,7 +9,7 @@ const schema = buildSchema(`
 
 const root  = { hello: () => "Hello world!"};
 
-export default async (req: any, res: any) => {
+export default async (req, res) => {
   const query = req.body.query;
   const response = await graphql(schema, query, root);
 

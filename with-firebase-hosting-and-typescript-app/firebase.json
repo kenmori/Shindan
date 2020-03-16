@@ -1,4 +1,7 @@
 {
+  "projects": {
+    "default": "matchapp"
+  },
   "functions": {
     "source": "dist/functions",
     "predeploy": [
