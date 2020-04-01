@@ -13,16 +13,14 @@ const Home = () => (
       <p className="description">
         相互で質問しあってリアルタイムで回答をえるアプリです
       </p>
-
       <div className="row">
             <h3>診断アプリ</h3>
             <p>参加する人数を決めてください</p>
-
-        <Link href="/create">
-          <a className="card">
-              質問を作成する
-          </a>
-        </Link>
+          <Link href="/create">
+            <a className="card">
+                質問を作成する
+            </a>
+          </Link>
       </div>
     </div>
 
