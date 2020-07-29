@@ -1,0 +1,10 @@
+diff a/build/static/js/2.fdd59589.chunk.js b/build/static/js/2.fdd59589.chunk.js	(rejected hunks)
+@@ -872,2 +872,2 @@
+-              ("o" === t[0] || "O" === t[0]) &&
+-              ("n" === t[1] || "N" === t[1])) ||
++            ("o" === t[0] || "O" === t[0]) &&
++            ("n" === t[1] || "N" === t[1])) ||
+@@ -3486 +3486,2 @@
+-              !nl(n, r) || !nl(l, a);
++              !nl(n, r) ||
++              !nl(l, a);

@@ -1,0 +1,16 @@
+
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="-1.11022302e-14%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#51DAEC" offset="0%"></stop>
+            <stop stop-color="#219388" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home-new2" transform="translate(-242.000000, -381.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="矢印アイコン-左1-copy-2" transform="translate(247.000000, 386.000000) scale(1, -1) rotate(90.000000) translate(-247.000000, -386.000000) translate(242.000000, 381.000000)">
+                <path d="M8.86534113,3.71947368 L4.40752437,3.71947368 L6.28883041,1.92906433 C6.73502924,1.50477583 6.75280702,0.798927875 6.32808967,0.35251462 C5.90356725,-0.0936842105 5.19795322,-0.111033138 4.75175439,0.313469786 L0,4.83442495 L4.75177388,9.35516569 C5.19797271,9.77988304 5.90358674,9.76208577 6.32810916,9.31588694 C6.75282651,8.86992203 6.73502924,8.16385965 6.2888499,7.73978558 L4.40754386,5.94937622 L8.86538012,5.94937622 C9.4814425,5.94937622 9.98054581,5.45046784 9.98054581,4.83440546 C9.98050682,4.21838207 9.48140351,3.71947368 8.86534113,3.71947368 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>
